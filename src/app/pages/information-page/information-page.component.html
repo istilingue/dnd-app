@@ -1,0 +1,22 @@
+<div class="container-div">
+  <div class="header">
+    <i class="bi bi-arrow-left" (click)="back()"></i>
+    <div class="theme">
+      {{ infoPath }}
+    </div>
+    <div class=""></div>
+  </div>
+  <div class="content">
+    <div class="informations-list">
+      @for (item of info.results; track $index) {
+      <div class="list-item" (click)="getDescription(item.url)" >
+        <h2>{{ item.name }}</h2>
+      </div>
+      }
+    </div>
+    <div class="informations-description">
+      
+      {{description|json}}
+    </div>
+  </div>
+</div>

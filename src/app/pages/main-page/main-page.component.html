@@ -1,0 +1,7 @@
+<div class="container-div">
+  <div class="content">
+    @for (i of sections; track $index) {
+        <app-card [title]="formatSections(i)" (click)="seeInfo(i)"></app-card>
+    }
+  </div>
+</div>
